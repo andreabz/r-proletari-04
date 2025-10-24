@@ -1,0 +1,404 @@
+/* ============================================ */
+/*  FONT E COLORI BASE                          */
+/* ============================================ */
+@font-face {
+  font-family: 'Anton';
+  src: url('fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --rosso-proletario: #BA1212;
+  --rosso-ombra: #7a0000;
+  --giallo-rivoluzione: #fada5e;
+  --grigio-fumo: #222;
+  --grigio-chiaro: #fafafa;
+}
+
+/* ============================================ */
+/*  STRUTTURA BASE                              */
+/* ============================================ */
+body {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 10pt;
+  line-height: 1.6;
+  color: var(--grigio-fumo);
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--rosso-proletario);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--rosso-proletario);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  background-color: var(--rosso-proletario);
+  text-decoration: underline;
+}
+
+/* ============================================ */
+/*  BOTTONI                                     */
+/* ============================================ */
+.btn {
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.btn-primary {
+  background-color: var(--rosso-proletario);
+  border-color: var(--rosso-proletario);
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: var(--rosso-ombra);
+  border-color: var(--rosso-ombra);
+}
+
+.btn-default, .btn-secondary {
+  background-color: #fff;
+  border: 1px solid var(--rosso-proletario);
+  color: var(--rosso-proletario);
+}
+.btn-default:hover, .btn-secondary:hover {
+  background-color: var(--rosso-proletario);
+  color: #fff;
+}
+
+/* ============================================ */
+/*  BOX / PANEL / CARD                          */
+/* ============================================ */
+.panel, .card, .well {
+  border: 1px solid var(--rosso-proletario);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(176, 0, 0, 0.1);
+}
+
+.panel-heading, .card-header {
+  background-color: var(--rosso-proletario);
+  color: #fff;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.panel-body, .card-body {
+  background-color: #fff;
+}
+
+/* ============================================ */
+/*  DATATABLE                                   */
+/* ============================================ */
+table.dataTable.soviet-table thead th {
+  background-color: var(--rosso-proletario);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  border-bottom: 3px solid var(--rosso-ombra);
+}
+
+table.dataTable.soviet-table tbody td {
+  font-family: 'Inter', sans-serif;
+  color: var(--grigio-fumo);
+  background-color: var(--grigio-chiaro);
+  border-top: 1px solid #ddd;
+}
+
+table.dataTable.soviet-table tbody tr:hover {
+  background-color: #ffe6e6;
+}
+
+table.dataTable.soviet-table caption {
+  font-family: 'Anton', sans-serif;
+  color: var(--rosso-proletario);
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+table.dataTable tbody tr.selected,
+table.dataTable tbody tr > .selected {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+/* ============================================ */
+/*  ELEMENTI TESTUALI SPECIALI                  */
+/* ============================================ */
+blockquote {
+  border-left: 4px solid var(--rosso-proletario);
+  padding-left: 1rem;
+  color: var(--rosso-proletario);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  background-color: #fff5f5;
+}
+
+.callout-warning, .alert-warning {
+  border-left: 6px solid var(--rosso-proletario);
+  background-color: #fff5f5;
+  color: #660000;
+  font-weight: 500;
+  box-shadow: 0 0 6px rgba(176, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.callout-warning h2, .alert-warning h3 {
+  color: var(--rosso-proletario);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* ============================================ */
+/*  SCROLLBAR, SELEZIONE E DETTAGLI             */
+/* ============================================ */
+::selection {
+  background-color: var(--rosso-proletario);
+  color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--rosso-proletario);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--rosso-ombra);
+}
+
+/* ============================================ */
+/*  CONTROLLI                                   */
+/* ============================================ */
+
+/* Label dei controlli */
+.control-label {
+  color: #BA1212 !important;
+  font-weight: bold;
+  font-family: 'Anton', sans-serif;
+}
+
+/* Select e Date Input */
+select.form-control, 
+input[type="date"].form-control {
+  border: 2px solid #BA1212 !important;
+  color: #BA1212 !important;
+  font-weight: bold;
+  background-color: #fff8f8 !important;
+  font-family: 'Anton', sans-serif;
+}
+
+/* Al passaggio del mouse o focus */
+select.form-control:focus,
+input[type="date"].form-control:focus {
+  border-color: #fada5e !important;
+  box-shadow: 0 0 5px #fada5e !important;
+  outline: none !important;
+}
+
+/* Opzioni dei menu a tendina */
+select.form-control option {
+  color: #BA1212 !important;
+  background-color: #fff8f8 !important;
+}
+
+/* --- Calendario rosso sovietico --- */
+
+/* Giorno selezionato */
+.datepicker td.active, 
+.datepicker td.active:hover {
+  background-color: #BA1212 !important;   /* rosso proletario */
+  color: #fada5e !important;               /* testo giallo rivoluzionario */
+  font-weight: bold !important;
+  border-radius: 4px !important;
+}
+
+/* Giorno sotto hover (non selezionato) */
+.datepicker td.day:hover {
+  background-color: #fada5e !important;    /* giallo sovietico */
+  color: #BA1212 !important;
+}
+
+input[type="date"]:focus,
+input[type="date"]:focus-visible,
+.shiny-date-input input:focus,
+.shiny-date-input input:focus-visible {
+  box-shadow: 0 0 6px 2px #BA1212 !important; /* Ombra rossa */
+  border-color: #BA1212 !important;
+  outline: none !important; /* Rimuove l'outline blu */
+}
+
+/* Opzione selezionata */
+.selectize-dropdown-content .selected {
+  background-color: #BA1212 !important;  /* rosso proletario */
+  color: #fada5e !important;              /* testo giallo rivoluzionario */
+  font-weight: bold !important;
+  border-radius: 4px !important;
+}
+
+/* Opzione sotto hover (non selezionata) */
+.selectize-dropdown-content .active:hover {
+  background-color: #fada5e !important;  /* giallo sovietico */
+  color: #BA1212 !important;
+}
+
+/* Ombra dei box di selezione */
+.selectize-input:focus,
+.selectize-control.single .selectize-input.input-active {
+  box-shadow: 0 0 5px 2px #BA1212 !important; /* Ombra rossa */
+  border-color: #BA1212 !important;           /* Bordo rosso coerente */
+  outline: none !important;                    /* Rimuove outline blu di default */
+}
+
+/* ============================================ */
+/*  BSLIB                                       */
+/* ============================================ */
+
+/* Sidebar */
+.bslib-sidebar {
+  background-color: #fff5f5;
+  border-right: 4px solid #BA1212;
+  padding: 1.5rem;
+}
+.bslib-sidebar h4 {
+  font-family: 'Anton', sans-serif;
+  color: #BA1212;
+  text-transform: uppercase;
+}
+
+/* Sezione social icons */
+.social-icons {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
+.social-icons a {
+  color: #fada5e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* Centra orizzontalmente i grafici Shiny */
+.plot-container, 
+.shiny-plot-output {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Limita la larghezza del grafico */
+.shiny-plot-output {
+  max-width: 90%;
+}
+
+/* ============================================ */
+/*  LOGO E TITOLO NAVBAR                        */
+/* ============================================ */
+/* Contenitore del logo + titolo */
+.navbar-title-container {
+  display: flex;
+  align-items: center;
+  /* mantieni il logo a sinistra senza justify-content: center */
+  gap: 15px;
+  width: 100%;
+  position: relative;
+}
+
+/* Logo */
+.navbar-logo {
+  height: 80px;
+  margin-right: 20px;
+}
+
+/* Centrare solo il testo orizzontalmente */
+.navbar-title-text {
+  position: absolute;
+  right: 1rem;
+  text-align: right;    /* allinea testo a destra */
+  white-space: nowrap;
+  pointer-events: none;
+  top: 50%;
+  padding-right: 100px; /* spazio per icone */
+  transform: translate(0%, -50%);
+}
+
+.navbar-title-text .subtitle {
+  font-size: 0.8rem;           /* dimensione più piccola per la seconda riga */
+  color: #fada5e;              /* eventualmente mantenere stile */
+  text-transform: uppercase;   /* se vuoi */
+  letter-spacing: 1px;         /* per uniformità */
+  margin-top: 0.2rem;          /* piccolo spazio sopra la seconda riga */
+}
+
+/* Contenitore principale della navbar */
+.navbar .container-fluid {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative;
+}
+
+/* Navbar compatta, senza margini o padding e senza bordo inferiore */
+.navbar {
+  background-color: #BA1212 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+  border: none !important;
+  --bs-navbar-brand-margin-end: 0rem !important; /* elimina margine interno residuo */
+}
+
+/* Stile base per link e brand */
+.navbar-brand, .nav-link {
+  color: #fff !important;
+  font-family: 'Anton', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #fada5e !important;
+}
+
+/* Evita la doppia sottolineatura */
+.navbar-nav > li > a {
+  text-decoration: none !important; /* rimuove quella nativa */
+  border-bottom: 2px solid transparent; /* prepara quella stilizzata */
+  transition: border-color 0.2s ease;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li.active > a {
+  border-bottom: 2px solid var(--giallo-rivoluzione); /* sottolineatura unica */
+  text-decoration: none !important;
+  background: none !important;
+}
+
+.markdown {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem 2rem 5rem 2rem; /* padding-bottom per lo spazio finale */
+  color: #fff;
+  line-height: 1.6;
+}

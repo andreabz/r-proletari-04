@@ -1,0 +1,19 @@
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+
+# renv
+renv/library/
+renv/staging/
+
+# rsconnect
+rsconnect/
+.rsconnect/
+
+# credenziali locali
+.Renviron
+
+# deploy to shinyapps.io
+deploy.R
