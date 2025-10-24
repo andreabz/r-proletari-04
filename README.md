@@ -20,7 +20,7 @@ e provincia dell'Emilia-Romagna. I dati utilizzati sono quelli dei compagni di
 - Generare a richiesta i dati del bollettino.
 
 👉 L'applicazione è disponibile su:  
-[https://andreabz.github.io/r-proletari-03/](https://andreabz.github.io/r-proletari-03/)
+[https://abazz.shinyapps.io/r-proletari-04/](https://abazz.shinyapps.io/r-proletari-04/)
 
 ---
 
@@ -54,6 +54,7 @@ e provincia dell'Emilia-Romagna. I dati utilizzati sono quelli dei compagni di
 2. Inizializzare l'applicazione
 
    ```r
+   renv::restore()
    runApp()
    ```
    
@@ -70,18 +71,18 @@ Il report confronta i dati osservati con i valori limite di legge, ad esempio:
 
 ## Output
 
-Una applicazione web `shiny` disponibile all'indirizzo [in costruzione]()
+Una applicazione web `shiny` disponibile all'indirizzo [https://abazz.shinyapps.io/r-proletari-04/](https://abazz.shinyapps.io/r-proletari-04/)
 
 ## Contatti e contributi
 
-Il codice è libero come dev’essere la conoscenza: ogni compagno o compagna può **leggerlo, copiarlo, migliorarlo o farne una propria versione**.  
+Il codice è libero come dev'essere la conoscenza: ogni compagno o compagna può **leggerlo, copiarlo, migliorarlo o farne una propria versione**.  
 Le *pull request* sono benvenute, purché portino avanti la causa della **trasparenza e dell’efficienza proletaria**.
 
 📬 **Scrivici:** [LinkedIn](https://it.linkedin.com/in/andreabazzano)  
 💻 **Partecipa:** [GitHub](https://github.com/andreabz/)
 
 Ogni bug è una **contraddizione interna del sistema**: segnalarlo è un atto rivoluzionario.  
-Se l’app ti è utile, **condividila**.  
+Se l'app ti è utile, **condividila**.  
 Se ti piace, **forkala**.  
 Se non funziona, **riparala**.  
 L’importante è **non restare fermi**.
