@@ -9,6 +9,8 @@ Con poche scelte – la provincia, la data, il parametro – ogni compagno può 
 
 Un clic su *“Genera bollettino”* ed è fatta: tabelle, grafici, analisi schiette, senza gergo borghese.
 
+> *“Riposa compagno Stachánov,<br> ora il compagno silicio lavora per il popolo!”*
+
 ### Dietro le quinte
 
 - raccolta dei dati attraverso l'API dai compagni di ARPAE Emilia-Romagna;  
@@ -24,11 +26,13 @@ Ogni report è un grido di lotta, ogni clic un atto di partecipazione.
 Qui non si fanno pipeline ambiziose, non si allenano algoritmi al servizio del capitale: qui vogliamo sgravarci dal lavoro
 ripetitivo e frustrante a cui siamo chiamati noi proletari del dato.
 
+> *“Il lavoro ripetitivo uccide il proletario digitale:<br> ribellatevi e scrivete codice”*
+
 ### Struttura dell'applicazione
 
 - `ui.R` – definisce l'interfaccia grafica dell'applicazione.
 - `server.R` – definisce la reattività e la logica dell'applicazione.
-- `init.R` – script per inizializzare l'ambiente con **renv** e le librerie necessarie.  
+- `global.R` – script per caricare le librerie e gli script necessari.  
 - `R/` – funzioni per scaricare, pulire e analizzare i dati.  
 - `data/` – archivio dei dati grezzi delle anagrafiche.  
 - `renv/` + `renv.lock` – ambiente R riproducibile e condivisibile.
@@ -57,4 +61,4 @@ L'importante è non restare fermi.
 
 > *“La statistica al servizio del popolo, non del profitto.”*
 
-<div style="margin-top: 3rem;"></div>
+<!-- Riga vuota finale obbligatoria -->

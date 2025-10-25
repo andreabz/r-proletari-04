@@ -1,0 +1,24 @@
+# Ignora file e directory di controllo versione
+.git
+.gitignore
+
+# Ignora configurazioni personali e di RStudio
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+
+# Ignora cartelle di dati grezzi o output temporanei non necessari
+/tmp
+/cache
+
+# Ignora script di sviluppo o test non necessari in produzione
+/tests
+
+# File di Github
+LICENSE
+README.md
+
+# Deploy
+deploy.R

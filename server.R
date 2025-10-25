@@ -42,11 +42,13 @@ server <- function(input, output, session) {
   output$instructions <- renderUI({
     if (!vals()) {
       tagList(
-        tags$p(HTML("Benvenuto Compagno!<br>
+        div(class = "shiny-markdown-container",
+            tags$p(HTML("Benvenuto Compagno!<br>
                   Seleziona la provincia, la data e il parametro di interesse
                   per generare il bollettino.<br><br>
                   Ricordati che se cerchi dati ufficiali, devi rivolgerti
                   ai bollettini di <a href='https://www.arpae.it/it/temi-ambientali/aria/dati-qualita-aria'>ARPA Emilia-Romagna</a>")
+            )
         )
       )
     } else {

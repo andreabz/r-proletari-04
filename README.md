@@ -28,7 +28,7 @@ e provincia dell'Emilia-Romagna. I dati utilizzati sono quelli dei compagni di
 
 - `ui.R` – definisce l'interfaccia grafica dell'applicazione.  
 - `server.R` – definisce la reattività e la logica dell'applicazione.  
-- `init.R` – script per inizializzare l'ambiente con **renv** e le librerie necessarie.  
+- `global.R` – script per caricare le librerie e gli script necessari.  
 - `R/` – funzioni per scaricare, pulire e analizzare i dati.  
 - `data/` – archivio dei dati grezzi delle anagrafiche.  
 - `renv/` + `renv.lock` – ambiente R riproducibile e condivisibile.

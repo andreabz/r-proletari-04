@@ -1,5 +1,5 @@
 # ────────────────────────────────────────────────
-# init.R — Inizializzazione del progetto
+# global.R — Inizializzazione del progetto
 # ────────────────────────────────────────────────
 
 library(shiny)
@@ -19,5 +19,3 @@ source(here("R", "data_anagrafiche.R"))
 source(here("R", "analisi_numerica.R"))
 source(here("R", "analisi_grafica.R"))
 source(here("R", "report_helper.R"))
-
-message("✅ Ambiente inizializzato con successo.")

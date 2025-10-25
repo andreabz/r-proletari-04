@@ -1,5 +1,3 @@
-source("init.R")
-
 ui <- page_navbar(
   id = "main_navbar",
   title = div(
@@ -62,6 +60,8 @@ ui <- page_navbar(
   
   nav_panel(
     "Come funziona",
-    includeMarkdown(here("www", "come-funziona.md"))
+    div(class = "shiny-markdown-container",
+        includeMarkdown(here("www", "come-funziona.md"))
+    )
   )
 )

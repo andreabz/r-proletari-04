@@ -395,10 +395,26 @@ input[type="date"]:focus-visible,
   background: none !important;
 }
 
-.markdown {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 2rem 2rem 5rem 2rem; /* padding-bottom per lo spazio finale */
-  color: #fff;
+/* ============================================ */
+/*  MARKDOWN                                    */
+/* ============================================ */
+.shiny-markdown-container {
+  max-width: 700px;
+  margin-left: 40px; /* margine sinistro più contenuto */
+  margin-right: 20px;
+  padding: 2rem 2rem 5rem 2rem;
   line-height: 1.6;
+  font-size: 18px;
+}
+
+.shiny-markdown-container h1 { 
+  font-size: 2.8em;   /* circa 50px se il base è 18px */
+}
+
+.shiny-markdown-container h2 {
+  font-size: 2.2em;   /* circa 40px */
+}
+
+.shiny-markdown-container h3 {
+  font-size: 1.6em;   /* circa 28-30px */
 }
