@@ -41,9 +41,20 @@ ui <- page_navbar(
         includeHTML(here("www", "mappa.html")),
         tags$script(src = "mappa.js"),
         br(),
-        uiOutput("data_selector"),
+        dateInput(
+          "data",
+          "Seleziona la data:",
+          min = data_min,
+          max = data_max,
+          value = data_def,
+          language = "it"
+        ),
         br(),
-        uiOutput("parametro_selector"),
+        selectInput(
+          "parameter_sel",
+          "Seleziona il parametro:",
+          choices = opzioni
+        ),
         br(),
         actionButton("genera", "Genera bollettino", class = "btn btn-danger w-100")
       ),

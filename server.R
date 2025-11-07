@@ -1,35 +1,10 @@
 server <- function(input, output, session) {
-  # ---- Lettura dati base ----
-  province <- fread(here("data", "anagrafica_province.csv"))
-  stazioni <- fread(here("data", "anagrafica_stazioni.csv"))
-  parametri <- c("PM10", "PM2.5", "NO2", "SO2", "CO", "O3")
-  
-  # ---- Gestione date ----
-  output$data_selector <- renderUI({
-    dateInput(
-      "data",
-      "Seleziona la data:",
-      min = Sys.Date() - 30,
-      max = Sys.Date() - 2,
-      value = Sys.Date() - 2,
-      language = "it"
-    )
-  })
   
   # ---- Selezione provincia dalla mappa ----
   provincia <- reactiveValues(sigla = NULL, nome = NULL)
   observeEvent(input$provincia_click, {
     provincia$sigla <- input$provincia_click
     provincia$nome <- carica_provincia(input$provincia_click)
-  })
-  
-  # ---- Selezione del parametro ----
-  output$parametro_selector <- renderUI({
-    nomi <- sapply(parametri, function(p)
-      etichette_parametro(p)$nome)
-    selectInput("parameter_sel",
-                "Seleziona il parametro:",
-                choices = setNames(parametri, nomi))
   })
   
   # ---- Helper ----
@@ -111,7 +86,8 @@ server <- function(input, output, session) {
     req(dati_generati())
     
     commento_superamenti(parametro = dati_generati()$parametro_sel,
-                         res = dati_generati()$tabella) |> commonmark::markdown_html() |> HTML()
+                         res = dati_generati()$tabella) |> 
+                          commonmark::markdown_html() |> HTML()
   })
   
   # ---- Tabella ----
